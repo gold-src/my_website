@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AZERTY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+  <link rel="manifest" href="src/favicon/site.webmanifest">
+  <link rel="mask-icon" href="src/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          emailjs.init('ob04m3Pka9TbZwBlr');
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm('contact_service', 'contact_form', this)
+                  .then(function() {
+                      console.log('SUCCESS!');
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-logo-arround">
+        <img src="src/logo.svg" class="navbar-logo">
+    </div>
+    <p class="navbar-btn">Menu</p>
+  </div>
+  <div class="header">
+    <h1 class="header-title">Websites and digital experiences</h1>
+    <p class="header-text">Created with the latest technology on the market</p>
+    <a class="header-btn" href="#contact">Contact now</a>
+  </div>
+  <div class="projects">
+    <div class="projects-row">
+        <div class="projects-big-card">
+            <img class="projects-big-img" src="src/projects1.png">
+            <div class="projects-big-bloc">
+                <p class="projects-title">THE TWELVEFOLD AUCTION</p>
+                <p class="projects-text">The TwelveFold Auction will begin on March 5th, 2023 at 3pm PT.</p>
+                <p class="projects-btn">See more</p>
+            </div>
+        </div>
+        <div class="projects-small-card">
+            <img class="projects-small-img" src="src/projects1.png">
+            <div class="projects-small-bloc">
+                <p class="projects-title">THE TWELVEFOLD AUCTION</p>
+                <p class="projects-text">The TwelveFold Auction will begin on March 5th, 2023 at 3pm PT.</p>
+                <p class="projects-btn">See more</p>
+            </div>
+        </div>
+    </div>
+    <div class="projects-row">
+        <div class="projects-small-card">
+            <img class="projects-small-img" src="src/projects1.png">
+            <div class="projects-small-bloc">
+                <p class="projects-title">THE TWELVEFOLD AUCTION</p>
+                <p class="projects-text">The TwelveFold Auction will begin on March 5th, 2023 at 3pm PT.</p>
+                <p class="projects-btn">See more</p>
+            </div>
+        </div>
+        <div class="projects-big-card">
+            <img class="projects-big-img" src="src/projects1.png">
+            <div class="projects-big-bloc">
+                <p class="projects-title">THE TWELVEFOLD AUCTION</p>
+                <p class="projects-text">The TwelveFold Auction will begin on March 5th, 2023 at 3pm PT.</p>
+                <p class="projects-btn">See more</p>
+            </div>
+        </div>
+    </div>
+    <div class="projects-row">
+        <div class="projects-small-card">
+            <img class="projects-small-img" src="src/projects1.png">
+            <div class="projects-small-bloc">
+                <p class="projects-title">THE TWELVEFOLD AUCTION</p>
+                <p class="projects-text">The TwelveFold Auction will begin on March 5th, 2023 at 3pm PT.</p>
+                <p class="projects-btn">See more</p>
+            </div>
+        </div>
+        <div class="projects-small-card">
+            <img class="projects-small-img" src="src/projects1.png">
+            <div class="projects-small-bloc">
+                <p class="projects-title">THE TWELVEFOLD AUCTION</p>
+                <p class="projects-text">The TwelveFold Auction will begin on March 5th, 2023 at 3pm PT.</p>
+                <p class="projects-btn">See more</p>
+            </div>
+        </div>
+        <div class="projects-small-card">
+            <img class="projects-small-img" src="src/projects1.png">
+            <div class="projects-small-bloc">
+                <p class="projects-title">THE TWELVEFOLD AUCTION</p>
+                <p class="projects-text">The TwelveFold Auction will begin on March 5th, 2023 at 3pm PT.</p>
+                <p class="projects-btn">See more</p>
+            </div>
+        </div>
+    </div>
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+  </div>
+</body>
+</html>
