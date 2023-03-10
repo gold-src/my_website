@@ -152,13 +152,13 @@
 
   .navbar-logo {
     display: flex;
-    fill: #000;
+    fill: #19191a;
     justify-content: center;
   }
 
   .navbar-btn {
     display: flex;
-    color: #000;
+    color: #19191a;
     margin: auto 10px auto auto;
     border-radius: 30px;
     padding: 10px 20px;
@@ -177,7 +177,7 @@
   .header {
     display: flex;
     flex-direction: column;
-    background-color: #000;
+    background-color: #19191a;
     width: 80vw;
     height: 90vh;
     margin: 80vh auto 5vh;
@@ -209,7 +209,7 @@
     margin: 30px auto auto;
     justify-content: center;
     text-align: center;
-    color: #000;
+    color: #19191a;
     font-size: 16px;
     font-weight: 400;
     padding: 10px 20px;
@@ -245,19 +245,21 @@
   .projects-big-card {
     display: flex;
     flex-direction: row;
-    background-color: #000;
+    background-color: #19191a;
     width: 66%;
     height: 600px;
     border-radius: 30px;
+    text-decoration: none;
   }
 
   .projects-small-card {
     display: flex;
     flex-direction: column;
-    background-color: #000;
+    background-color: #19191a;
     width: 32%;
     height: 600px;
     border-radius: 30px;
+    text-decoration: none;
   }
 
   .projects-big-img {
@@ -308,7 +310,7 @@
 
   .projects-btn {
     display: flex;
-    color: #000;
+    color: #19191a;
     background-color: #fff;
     margin: auto auto 0 0;
     border-radius: 30px;
@@ -322,6 +324,113 @@
 
   .projects-btn:hover {
     background-color: #dedede;
+    transition: 0.3s;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    background-color: #19191a;
+    width: calc(80vw - 2%);
+    max-width: 850px;
+    height: 600px;
+    margin: 5vh auto 10vh;
+    border-radius: 30px;
+    padding: 1%;
+    justify-content: space-between;
+  }
+
+  .contact-image {
+    display: flex;
+    width: 48%;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 1%;
+  }
+
+  .contact-title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-bloc {
+    display: flex;
+    flex-direction: column;
+    background-color: #19191a;
+    color: #dedede;
+    border: 1px solid #dedede;
+    border-radius: 30px;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .contact-input {
+    display: flex;
+    padding: unset;
+    background-color: transparent;
+    font-size: 14px;
+    color: #fff;
+    border: unset;
+  }
+
+  .contact-input:focus {
+    outline: unset;
+  }
+
+  /* Change the white to any color */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px #19191a inset !important;
+    }
+
+    /*Change text in autofill textbox*/
+    input:-webkit-autofill{
+        caret-color: #fff;
+        -webkit-text-fill-color: #fff !important;
+    }
+
+  .contact-selected {
+    border: 1px solid blue;
+    outline: 3px solid blue;
+  }
+
+  .contact-btn {
+    display: flex;
+    margin-top: auto;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    line-height: 24px;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+  }
+
+  .contact-btn:hover {
+    background-color: rgb(53, 53, 255);
     transition: 0.3s;
   }
   
