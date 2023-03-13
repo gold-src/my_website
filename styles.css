@@ -240,6 +240,13 @@
     height: 600px;
     border-radius: 30px;
     text-decoration: none;
+    filter: brightness(0.85);
+    transition: 0.3s;
+  }
+
+  .projects-big-card:hover {
+    filter: brightness(1);
+    transition: 0.3s;
   }
 
   .projects-small-card {
@@ -250,6 +257,13 @@
     height: 600px;
     border-radius: 30px;
     text-decoration: none;
+    filter: brightness(0.85);
+    transition: 0.3s;
+  }
+
+  .projects-small-card:hover {
+    filter: brightness(1);
+    transition: 0.3s;
   }
 
   .projects-big-img {
@@ -460,6 +474,7 @@
       flex-direction: column;
       width: 100%;
       margin: 30px 0;
+      filter: brightness(1);
     }
 
     .projects-big-img {
@@ -476,6 +491,7 @@
 
     .projects-small-card {
       width: 100%;
+      filter: brightness(1);
     }
 
     .contact {
