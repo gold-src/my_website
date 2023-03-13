@@ -21,12 +21,19 @@
       window.onload = function() {
           document.getElementById('contact-form').addEventListener('submit', function(event) {
               event.preventDefault();
-              // generate a five digit number for the contact_number variable
-              this.contact_number.value = Math.random() * 100000 | 0;
+              let firstname = document.getElementById('ifirstname').value;
+              let lastname = document.getElementById('ilastname').value;
+              let email = document.getElementById('iemail').value;
+              let message = document.getElementById('imessage').value;
+              console.log(firstname);
+              console.log(lastname);
+              console.log(email);
+              console.log(message);
+              return;
               // these IDs from the previous steps
               var templateParams = {
-                from_name: 'James',
-                message: 'Check this out!'
+                from_name: `${firstname} ${lastname}`,
+                message: `Email : ${email}\n${message}`
                 };
               emailjs.send('service_4s5h8bb', 'template_ckdlx0m', templateParams)
                 .then(function(response) {
@@ -125,20 +132,20 @@
           <div class="contact-row">
               <div class="contact-bloc" style="width: 36%;" id="firstname">
                   <label>Firstname</label>
-                  <input class="contact-input" type="text" name="firstname" id="ifirstname">
+                  <input class="contact-input" type="text" name="firstname" id="ifirstname" required="required">
               </div>
               <div class="contact-bloc" style="width: 36%;" id="lastname">
                   <label>Lastname</label>
-                  <input class="contact-input" type="text" name="lastname" id="ilastname">
+                  <input class="contact-input" type="text" name="lastname" id="ilastname" required="required">
               </div>
           </div>
           <div class="contact-bloc" id="email">
               <label>Email</label>
-              <input class="contact-input" type="email" name="email" id="iemail">
+              <input class="contact-input" type="email" name="email" id="iemail" required="required">
           </div>
           <div class="contact-bloc" id="message">
               <label>Message</label>
-              <input class="contact-input" type="text" name="message" id="imessage">
+              <input class="contact-input" type="text" name="message" id="imessage" required="required">
           </div>
           <input class="contact-btn" type="submit" value="Send">
       </form>
