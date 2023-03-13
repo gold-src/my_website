@@ -13,10 +13,6 @@ window.addEventListener("scroll", (event) => {
     var offsetsHeader = header.getBoundingClientRect();
     var offsetsProjects = projects.getBoundingClientRect();
     var offsetsContact = contactForm.getBoundingClientRect();
-    console.log(offsetsContact.top);
-    console.log(offsetsProjects.bottom);
-    console.log(logoTop);
-    console.log(logoBottom);
     if (offsetsHeader.top <= logoTop) {
         logo.style.opacity = '0';
     } else {
@@ -32,19 +28,4 @@ window.addEventListener("scroll", (event) => {
     } else {
         contact.style.opacity = '1';
     }
-
-
-    // if (scroll > window.innerHeight * 3) {
-    //     logo.style.display = 'none';
-    //     client.style.display = 'none';
-    //     contact.style.display = 'flex';
-    // } else if (scroll > window.innerHeight) {
-    //     logo.style.display = 'none';
-    //     client.style.display = 'flex';
-    //     contact.style.display = 'none';
-    // } else {
-    //     logo.style.display = 'flex';
-    //     client.style.display = 'none';
-    //     contact.style.display = 'none';
-    // }
 });
