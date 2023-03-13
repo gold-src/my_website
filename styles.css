@@ -439,6 +439,11 @@
       left: calc(50% - 45vw);
     }
 
+    .navbar-open {
+      width: 90vw;
+      left: calc(50% - 45vw);
+    }
+
     .header {
       width: 90vw;
     }
