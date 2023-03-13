@@ -446,4 +446,8 @@
     .contact-form {
       width: 98%;
     }
+
+    .contact-input {
+      font-size: 16px;
+    }
   }
