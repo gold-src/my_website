@@ -392,6 +392,11 @@
         max-width: 500px;
     }
 
+    .navbar {
+      width: 90vw;
+      left: calc(50% - 45vw);
+    }
+
     .header {
       width: 90vw;
     }
@@ -429,6 +434,8 @@
     .contact {
       flex-direction: column;
       height: unset;
+      width: 84vw;
+      padding: 3vw;
     }
 
     .contact-image {
