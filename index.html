@@ -41,11 +41,15 @@
 </head>
 <body id="body">
     <div class="background-custom" id="backgroundColor"></div>
-  <div class="navbar">
+  <div class="navbar" id="navbar">
     <a class="navbar-logo-arround" href="#body">
         <img src="src/logo.svg" class="navbar-logo">
     </a>
-    <p class="navbar-btn">Menu</p>
+    <p class="navbar-btn" id="menuBtn">Menu</p>
+  </div>
+  <div class="navbar-open" id="navbar-open" style="display: none;">
+    <a class="navbar-open-text" href="#projects">CLIENTS</a>
+    <a class="navbar-open-text" href="#contact">CONTACT US</a>
   </div>
   <img class="body-logo" id="body-logo" style="opacity: 1;" src="src/logo1.svg">
   <img class="body-logo" id="body-client" style="opacity: 0;" src="src/clients.svg">
@@ -147,5 +151,6 @@
   <script type="text/javascript" src="randomGradiant.js"></script>
   <script type ="text/javascript" src="inputStyle.js"></script>
   <script type ="text/javascript" src="bodyLogo.js"></script>
+  <script type="text/javascript" src="menu.js"></script>
 </body>
 </html>

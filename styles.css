@@ -46,10 +46,10 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
     bottom: 0;
     left: 0;
-    background: #000;
+    background: #19191a;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -63,8 +63,8 @@
     height: 60px;
     top: 20px;
     left: calc(50% - 200px);
-    justify-content: center;
     background-color: #fff;
+    justify-content: center;
     z-index: 100;
     border-radius: 50px;
   }
@@ -78,6 +78,7 @@
     border-radius: 30px;
     transition: 0.3s;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .navbar-logo-arround:hover {
@@ -103,10 +104,48 @@
     cursor: pointer;
     user-select: none;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .navbar-btn:hover {
     background-color: #dedede;
+    transition: 0.3s;
+  }
+
+  .navbar-open {
+    position: fixed;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    top: 20px;
+    left: calc(50% - 200px);
+    justify-content: center;
+    background-color: #ffff;
+    z-index: 99;
+    border-radius: 30px;
+  }
+
+  .navbar-open-text {
+    display: flex;
+    justify-content: center;
+    color: #19191a;
+    font-size: 24px;
+    padding: 10px 20px;
+    font-weight: 700;
+    margin: 0 auto 10px;
+    transition: 0.3s;
+    text-decoration: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .navbar-open-text:first-of-type {
+    margin-top: 60px;
+  }
+
+  .navbar-open-text:hover {
+    background-color: #dedede;
+    border-radius: 30px;
     transition: 0.3s;
   }
 
@@ -166,6 +205,7 @@
     border-radius: 30px;
     text-decoration: none;
     transition: 0.3s;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .header-btn:hover {
@@ -270,6 +310,7 @@
     transition: 0.3s;
     cursor: pointer;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .projects-btn:hover {
@@ -379,6 +420,7 @@
     cursor: pointer;
     user-select: none;
     border: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .contact-btn:hover {
